@@ -1,6 +1,9 @@
 <?php
 
+use TeaCaptcha\Captcha\Calculus;
+
 /**
+ * @package \TeaCaptcha
  * @author Ammar Faizi <ammarfaizi2@gmail.com>
  * @license GNU
  * @version 0.0.1
@@ -21,6 +24,11 @@ class TeaCaptcha
      * @var int
      */
     private $level = 1;
+
+    /**
+     * @var string
+     */
+    private $type = null;
 
     /**
      * @var string
@@ -120,6 +128,27 @@ class TeaCaptcha
                 return;
             }
             $this->level = (int)$_GET["level"];
+        }
+
+        if (isset($_GET["type"]) && is_string($_GET["type"])) {
+            $this->type = $_GET["type"];
+        } else {
+            $this->setError(
+                "\"type\" parameter is required and must be a string.",
+                400
+            );
+            return;
+        }
+
+        switch ($this->type) {
+            case "calculus":
+                $captcha = new Calculus($this);
+                break;
+            
+            default:
+                $this->setError("Invalid captcha type. Given type: \"{$this->type}\"", 400);
+                return;
+                break;
         }
     }
 
