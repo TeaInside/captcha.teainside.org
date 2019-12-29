@@ -1,5 +1,7 @@
 <?php
 
+namespace TeaCaptcha;
+
 use TeaCaptcha\Captcha\Calculus;
 
 /**
@@ -50,6 +52,8 @@ class TeaCaptcha
      */
     public function __construct()
     {
+        define("CAPTCHA_DIR", realpath(__DIR__."/../../captcha"));
+
         if (isset($_GET["key"]) && is_string($_GET["key"])) {
             $this->userKey = $_GET["key"];
         } else if (isset($_SERVER["HTTP_API_KEY"])) {
@@ -150,6 +154,11 @@ class TeaCaptcha
                 return;
                 break;
         }
+
+        $captcha->run();
+        http_response_code($this->httpCode);
+        echo json_encode($captcha->getResponse(), $this->jsonFlags);
+        exit;
     }
 
     /**
