@@ -5,7 +5,7 @@ if (isset($checkAnswer)) {
         (((int)$answer) === $correctAnswer);
 }
 
-switch (rand(1, 2)) {
+switch (rand(1, 3)) {
     case 1:
         $varList = ["x", "y", "z", "t", "u"];
         $varList2 = ["\\alpha", "\\beta", "\\gamma", "\\theta", "\\pi", "e"];
@@ -68,6 +68,12 @@ switch (rand(1, 2)) {
         $answer = rand(1, 500);
         $latex = '\frac{'.$answer.' \cdot \ln(e^{x})}{\sqrt{3} \cdot x} \sqrt{{\int_{0}^{\infty} -t^{4} e^{-t} dt} \cdot {\int_{\pi}^{2\pi} \tan(x) \cos(x) dx}}';
         $answer *= 4;
+        $msg = "Evaluate";
+        break;
+
+    case 3:
+        $answer = "e";
+        $latex = "\\lim_{n \\to \\infty} {(1 + \\frac{1}{n})}^{n}";
         $msg = "Evaluate";
         break;
 
