@@ -46,7 +46,7 @@ switch (rand(1, 3)) {
         }
 
         $answer = $diameter;
-        $latex = trim($fixEqu, "+")." ".$num." = 0";
+        $latex = trim($fixEqu, "+").$num." = 0";
         $msg = "Find the diameter of the circle with the following equation!";
         break;
 
