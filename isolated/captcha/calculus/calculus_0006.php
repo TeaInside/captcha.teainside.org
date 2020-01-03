@@ -15,7 +15,7 @@ switch (rand(1, 1)) {
         if ($py === 0) {
             $py += 1;
         }
-        $diameter = rand(1, 100);
+        $diameter = rand(1, 30);
 
         $tab = (-1 * (2 * $px));
         ($tab >= 0) and $tab = "+".$tab;
