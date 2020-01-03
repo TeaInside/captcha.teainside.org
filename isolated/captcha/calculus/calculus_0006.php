@@ -5,7 +5,7 @@ if (isset($checkAnswer)) {
         (((int)$answer) === $correctAnswer);
 }
 
-switch (rand(1, 3)) {
+switch (rand(1, 1)) {
     case 1:
         $px = rand(-100, 100);
         $py = rand(-100, 100);
