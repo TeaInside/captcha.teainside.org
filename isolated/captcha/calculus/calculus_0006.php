@@ -28,7 +28,7 @@ switch (rand(1, 1)) {
         $fEqu = explode(" ", $xequ." +".$yequ);
         shuffle($fEqu);
 
-        $num = -1 * $diameter;
+        $num = -1 * pow($diameter/2, 2);
         $fixEqu = "";
         foreach ($fEqu as $k => $v) {
             if (is_numeric($v)) {
