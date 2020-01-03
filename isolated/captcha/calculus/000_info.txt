@@ -1,1 +1,2 @@
 calculus_0005.php # Integral
+calculus_0006.php # Circle Equation
