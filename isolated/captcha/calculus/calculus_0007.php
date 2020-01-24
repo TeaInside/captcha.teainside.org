@@ -2,7 +2,6 @@
 
 switch (rand(1, 1)) {
     case 1:
-
         $cost = rand(-10000, 10000);
         $answer = $cost / 2;
         $div = rand(2, 100);
@@ -37,7 +36,7 @@ switch (rand(1, 1)) {
         $num = implode("", $num);
         $denom = implode("", $denom);
         $latex = "\\int_{0}^{1}\\left(".$dvd.$dqx[0]."\\frac{".$num."}{".$denom."} \\right) dx";
-        $answer = "Evaluate the following expression!";
+        $msg = "Evaluate the following expression!";
         break;
     default:
         break;
