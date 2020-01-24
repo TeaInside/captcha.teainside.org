@@ -10,18 +10,17 @@ switch (rand(1, 1)) {
         $dqx = [
             [
                 "\\left(\\sum_{n = 0}^{\\infty} \\frac{x^{n}}{\\Gamma(n + 1)}\\right)",
-                ""
+                $cost
             ],
             [
                 "",
-                "\\left(\\sinh(1) + \\cosh(1)\\right)^{x}"
+                $cost." \\left(\\sinh(1) + \\cosh(1)\\right)^{x}"
             ],
         ][rand(0, 1)];
 
-        $dvd = "\\frac{".$cost."}{".$div."}";
         $rne = "\\left(e\\,(\\sin(1) - \\cos(1)) + 1\\right)";
         $sinx = [
-            [["\\sin(2x)", "\\sec(x)"], "2"]
+            [["\\sin(2x)", "\\sec(x)"], (2 * $div)]
         ][rand(0, 0)];
 
         if (is_array($sinx[0])) {
