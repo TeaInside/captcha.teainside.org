@@ -6,21 +6,21 @@ switch (rand(1, 1)) {
         $answer = $cost / 2;
         $div = rand(2, 100);
         $cost *= $div;
-
+        $dcost = "\\left(".$cost."\\right)";
         $dqx = [
             [
                 "\\left(\\sum_{n = 0}^{\\infty} \\frac{x^{n}}{\\Gamma(n + 1)}\\right)",
-                $cost
+                $dcost
             ],
             [
                 "",
-                $cost." \\left(\\sinh(1) + \\cosh(1)\\right)^{x}"
+                $dcost." \\left(\\sinh(1) + \\cosh(1)\\right)^{x}"
             ],
         ][rand(0, 1)];
 
         $rne = "\\left(e\\,(\\sin(1) - \\cos(1)) + 1\\right)";
         $sinx = [
-            [["\\sin(2x)", "\\sec(x)"], (2 * $div)]
+            [["\\sin(2x)", "\\sec(x)"], "\\left(".(2 * $div)."\\right)"]
         ][rand(0, 0)];
 
         if (is_array($sinx[0])) {
