@@ -28,6 +28,9 @@ switch (rand(1, 1)) {
   \\right)
 \\right)}
 LATEX;
+
+        $latex = str_replace(["\n", " "], "", $latex);
+
 		$msg = "Evaluate this expression!";
         break;
     
