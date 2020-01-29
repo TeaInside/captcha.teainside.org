@@ -17,7 +17,7 @@ class Calculus extends CaptchaFoundation
      */
     public function run(): void
     {
-        $list = explode("\n", trim(file_get_contents(CAPTCHA_DIR."/calculus/001_list.txt")));
+        $list = explode("\n", trim(file_get_contents(CAPTCHA_DIR."/calculus/000_list.txt")));
         $n = array_rand($list);
         $this->response = self::reqIsolate(CAPTCHA_DIR."/calculus/calculus_".$list[$n].".php");
     }
