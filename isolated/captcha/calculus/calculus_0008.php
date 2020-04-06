@@ -7,7 +7,8 @@ return $n * factorial($n-1);
 return $n;
 }
 
-switch (rand(0, 1)) {
+$arr = [1, 1, 1, 1, 1, 1, 0, 0];
+switch ($arr[array_rand($arr)]) {
     case 0:
 
         $b = rand(2, 15);
