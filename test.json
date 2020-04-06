@@ -1,0 +1,1 @@
+	"& \\text{Calculate } \\\\\n& \\left(-\\Gamma(6)\\gamma + 120\\sum_{k = 0}^{\\infty} \\left(\\frac{1}{k} - \\frac{1}{z + k}\\right)\\right)\\frac{251}{\\psi(z + 1)} \\\\\n& \\text{for } Re(z) > 0. \\\\\n& \\gamma \\text{ denotes Euler-Mascheroni constant.}"
