@@ -7,7 +7,7 @@ return $n * factorial($n-1);
 return $n;
 }
 
-switch (rand(1, 1)) {
+switch (rand(0, 1)) {
     case 0:
 
         $b = rand(2, 15);
@@ -36,7 +36,7 @@ switch (rand(1, 1)) {
         $gammaParam = $f + 1;
 
         $latex = '& \text{Calculate } \\\\
-& \left(-\Gamma('.$gammaParam.')\gamma + '.$fac.'\sum_{k = 0}^{\infty} \left(\frac{1}{k} - \frac{1}{z + k}\right)\right)\frac{'.$factor.'}{\psi(z + 1)} \\\\
+& \left(-\Gamma('.$gammaParam.')\gamma + '.$fac.'\sum_{k = 1}^{\infty} \left(\frac{1}{k} - \frac{1}{z + k}\right)\right)\frac{'.$factor.'}{\psi(z + 1)} \\\\
 & \text{for } Re(z) > 0. \\\\
 & \gamma \text{ denotes Euler-Mascheroni constant.}';
         break;
