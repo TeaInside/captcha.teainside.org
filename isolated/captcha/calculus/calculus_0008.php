@@ -27,6 +27,8 @@ switch (rand(0, 1)) {
         shuffle($latex);
         $latex = implode("", $latex);
         $answer = $a;
+
+        $msg = "Evaluate the following expression";
         break;
     case 1:
         $f = rand(2, 7);
@@ -39,6 +41,8 @@ switch (rand(0, 1)) {
 & \left(-\Gamma('.$gammaParam.')\gamma + '.$fac.'\sum_{k = 1}^{\infty} \left(\frac{1}{k} - \frac{1}{z + k}\right)\right)\frac{'.$factor.'}{\psi(z + 1)} \\\\
 & \text{for } Re(z) > 0. \\\\
 & \gamma \text{ denotes Euler-Mascheroni constant.}';
+
+        $msg = "";
         break;
 }
 
