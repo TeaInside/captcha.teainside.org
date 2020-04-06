@@ -42,7 +42,7 @@ switch (rand(1, 1)) {
 }
 
 return [
-    "id" => "0006",
+    "id" => "0007",
     "est_time" => 600,
     "correct_answer" => $answer,
     "msg" => $msg,
