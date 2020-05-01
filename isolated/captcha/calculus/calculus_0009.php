@@ -7,7 +7,7 @@ function factorial($n) {
     return $n ? $n : 1;
 }
 
-switch (rand(1, 1)) {
+switch (rand(0, 1)) {
     case 0:
         $a = rand(4, 10);
         $p = rand(1, 2000);
