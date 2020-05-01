@@ -1,10 +1,10 @@
 <?php
 
 function factorial($n) {
-if ($n > 1) {
-return $n * factorial($n-1);
-}
-return $n;
+    if ($n > 1) {
+        return $n * factorial($n-1);
+    }
+    return $n ? $n : 1;
 }
 
 switch (rand(0, 1)) {
