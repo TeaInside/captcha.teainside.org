@@ -2,6 +2,7 @@
 
 namespace TeaCaptcha;
 
+use TeaCaptcha\Captcha\Assembly;
 use TeaCaptcha\Captcha\Calculus;
 
 /**
@@ -148,7 +149,9 @@ class TeaCaptcha
             case "calculus":
                 $captcha = new Calculus($this);
                 break;
-            
+            case "assembly":
+                $captcha = new Assembly($this);
+                break;
             default:
                 $this->setError("Invalid captcha type. Given type: \"{$this->type}\"", 400);
                 return;
