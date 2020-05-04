@@ -3,7 +3,7 @@
 
 switch (rand(0, 0)) {
   case 0:
-  $strn = rstr(4, "ABCDEFGHIJKLMNPQRSTUVWXYZ");
+  $strn = rstr(4, "ABCDEFG");
   $cost1 = bin2hex(strrev(substr($strn, -2)));
   $cost2 = rand(16, 255);
   $cost3 = rand(16, 255);
