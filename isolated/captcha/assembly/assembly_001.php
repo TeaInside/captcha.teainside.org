@@ -5,8 +5,8 @@ switch (rand(0, 0)) {
   case 0:
   $strn = rstr(4, "ABCDEFGHIJKLMNPQRSTUVWXYZ");
   $cost1 = bin2hex(strrev(substr($strn, -2)));
-  $cost2 = rand(0, 255);
-  $cost3 = rand(0, 255);
+  $cost2 = rand(16, 255);
+  $cost3 = rand(16, 255);
   $answer = "0x".$cost1.dechex($cost3).dechex($cost2);
 $latex = <<<CODE
 \\noindent arch:x86\_64,format:nasm
