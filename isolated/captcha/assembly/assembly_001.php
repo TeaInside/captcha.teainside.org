@@ -15,7 +15,7 @@ $latex = <<<CODE
    mov eax, "{$strn}"
    mov al, {$cost2}
    mov ah, {$cost3}
-\end{lstlisting}
+\\end{lstlisting}
 What is the latest value of \\\\
 rax? (answer in hexadecimal)
 CODE;
