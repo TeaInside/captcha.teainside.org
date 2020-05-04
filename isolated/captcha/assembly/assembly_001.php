@@ -17,7 +17,7 @@ $latex = <<<CODE
    mov ah, {$cost3}
 \\end{lstlisting}
 What is the latest value of \\\\
-rax? (answer in hexadecimal)
+eax? (answer in hexadecimal)
 CODE;
     
     break;
