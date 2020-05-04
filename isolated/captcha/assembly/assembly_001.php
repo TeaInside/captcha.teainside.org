@@ -27,10 +27,9 @@ CODE;
 }
 
 $msg = "Write the answer of the following problem in hexadecimal with 0x prefix!";
-echo $answer."\n";
-echo $latex;die;
+
 return [
-    "id" => "0005",
+    "id" => "0001",
     "est_time" => 600,
     "correct_answer" => $answer,
     "msg" => $msg,
