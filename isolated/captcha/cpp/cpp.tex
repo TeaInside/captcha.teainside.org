@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage{xcolor}
+\usepackage{listings}
+\colorlet{mygray}{black!30}
+\colorlet{mygreen}{green!60!blue}
+\colorlet{mymauve}{red!60!blue}
+\thispagestyle{empty}
+\lstset{
+  backgroundcolor=\color{gray!10},
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  commentstyle=\color{mygreen},
+  extendedchars=true,
+  %frame=single,
+  keepspaces=true,
+  keywordstyle=\color{blue},
+  language=c++,
+  numbers=none,
+  numbersep=5pt,
+  numberstyle=\tiny\color{blue},
+  rulecolor=\color{mygray},
+  showspaces=false,
+  showtabs=false,
+  stepnumber=2,
+  stringstyle=\color{mymauve},
+  tabsize=2,
+  title=\lstname
+}
+\begin{document}
+\begin{lstlisting}
+#include <stdio.h>
+int main() {
+  int x;
+  char wqz[5] = "ABCD";
+  x = *((int *)wqz);
+  ((char *)&x)[0] = 0xff;
+  ((char *)&x)[1] = 0xfc;
+  printf("%x\n", x);
+}
+\end{lstlisting}
+\end{document}
