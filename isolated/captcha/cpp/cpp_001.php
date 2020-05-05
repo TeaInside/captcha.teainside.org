@@ -31,7 +31,7 @@ CODE;
   default:
     break;
 }
-echo $latex." ".$answer;die;
+
 
 // $msg = "";
 
