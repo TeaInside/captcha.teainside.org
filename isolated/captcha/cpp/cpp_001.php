@@ -12,10 +12,11 @@ $latex = <<<CODE
 \\noindent arch:x86\_64
 \begin{minted}{c++}
 #include <stdio.h>
+#include <stdint.h>
 int main() {
-  int x;
+  uint32_t x;
   char wqz[5] = "{$strn}";
-  x = *((int *)wqz);
+  x = *((uint32_t *)wqz);
   ((char *)&x)[0] = {$cost2};
   ((char *)&x)[1] = {$cost3};
   printf("%#x\\n", x);
@@ -30,6 +31,7 @@ CODE;
   default:
     break;
 }
+echo $latex." ".$answer;die;
 
 // $msg = "";
 
