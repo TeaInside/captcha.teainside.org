@@ -31,11 +31,11 @@ CODE;
     break;
 }
 
-$msg = "Write the answer of the following problem in hexadecimal with 0x prefix!";
+// $msg = "";
 
 return [
     "id" => "0001",
-    "est_time" => 600,
+    "est_time" => 300,
     "correct_answer" => $answer,
     "msg" => $msg,
     "latex" => $latex
