@@ -7,6 +7,7 @@ function factorial($n) {
     return $n ? $n : 1;
 }
 
+$msg = "";
 switch (rand(0, 1)) {
     case 0:
         $a = rand(4, 10);
